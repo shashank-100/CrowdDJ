@@ -1,0 +1,51 @@
+@import '../variables.css';
+
+.search-box {
+  position: relative;
+  top: -30px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .search-bar {
+    width: 90%;
+    margin: 10px auto 0;
+
+    .placeholder {
+      position: relative;
+    }
+
+    .search, .cancel {
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      color: #bbb;
+    }
+
+    .cancel {
+      left:  auto;
+      right: 7px;
+      display: none;
+    }
+
+    input:focus {
+      & + .cancel {
+        display: block;
+      }
+    }
+
+    input {
+      border: none;
+      margin: 0 auto;
+      width: 100%;
+      height: 40px;
+      border-radius: 10px;
+      font-size: 16px;
+      padding: 10px;
+      padding-left: 40px;
+      background: #E8E4EF;
+    }
+  }
+
+}

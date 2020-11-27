@@ -1,0 +1,45 @@
+@import '../variables.css';
+
+tr {
+  height: 70px;
+  counter-increment: my_counter;
+
+  .ranking {
+    width: 30px;
+    position: relative;
+    top: -12px;
+    color: #a8a2b2;
+  }
+
+  .name-artist {
+    span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .name {
+      font-weight: 700;
+    }
+  }
+
+  .vote {
+    width: 60px;
+    padding-left: 10px;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
+      width: 100px;
+    }
+    .upvotes {
+      vertical-align: top;
+      margin-top: 3px;
+      margin-left: 5px;
+      display: inline-block;
+      width: 20px;
+      @media screen and (min-width: 768px) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
